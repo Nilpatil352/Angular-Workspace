@@ -1,0 +1,35 @@
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Welcome to ImaginaryCo</h1>
+    <p>Beautiful UI, clean code, and realtime content powered by Angular.</p>
+    <div class="hero-actions">
+      <a class="btn" routerLink="/about">Meet the Team</a>
+      <a class="btn btn-ghost" routerLink="/contact">Contact Us</a>
+    </div>
+  </div>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+       alt="Design and code on desk" loading="lazy">
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Latest Gallery</h2>
+    <p class="muted">Images fetched live from Picsum.</p>
+  </div>
+
+  <div *ngIf="loading" class="center muted">Loading images…</div>
+  <div *ngIf="error" class="center error">{{ error }}</div>
+
+  <div class="grid gallery" *ngIf="!loading && !error">
+    <figure *ngFor="let img of images" class="card-img">
+      <img
+        [src]="imgSrc(img, 600, 400)"
+        [attr.srcset]="imgSrc(img, 400, 260)+' 400w, ' + imgSrc(img, 600, 400)+' 600w, ' + imgSrc(img, 800, 520)+' 800w'"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        [alt]="'Photo by ' + img.author"
+        loading="lazy"
+      />
+      <figcaption>by {{ img.author }}</figcaption>
+    </figure>
+  </div>
+</section>

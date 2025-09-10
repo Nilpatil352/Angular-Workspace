@@ -1,0 +1,17 @@
+<section class="section">
+  <h1>About Us</h1>
+  <p class="muted">We’re a friendly team building delightful web experiences.</p>
+
+  <div *ngIf="loading" class="center muted">Loading team…</div>
+  <div *ngIf="error" class="center error">{{ error }}</div>
+
+  <div class="grid team" *ngIf="!loading && !error">
+    <article *ngFor="let m of members" class="card">
+      <img [src]="m.avatar" [alt]="m.name" loading="lazy">
+      <div class="card-body">
+        <h3>{{ m.name }}</h3>
+        <a [href]="'mailto:'+m.email">{{ m.email }}</a>
+      </div>
+    </article>
+  </div>
+</section>

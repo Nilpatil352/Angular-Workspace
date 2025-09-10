@@ -1,0 +1,46 @@
+.thankyou {
+  min-height: calc(100vh - 140px);
+  display: grid; place-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #f7fafc, #eef6f7);
+}
+
+.card {
+  width: min(680px, 100%);
+  background: #fff; border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+  padding: 2rem; text-align: center;
+}
+
+.checkmark {
+  width: 72px; height: 72px; margin: 0 auto 1rem;
+  display: grid; place-items: center; font-size: 2rem; font-weight: 800;
+  border-radius: 50%;
+  background: #e6fbfa; color: #117a76; border: 2px solid #5bc0be;
+}
+
+h2 { margin: .5rem 0 0.25rem; }
+.lead { color: #4a5568; margin-bottom: 1rem; }
+
+.meta {
+  display: grid; gap: .25rem; justify-content: center;
+  margin-bottom: 1rem; color: #2d3748;
+}
+
+hr { border: 0; height: 1px; background: #edf2f7; margin: 1rem 0; }
+
+.actions {
+  display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block; padding: .7rem 1rem; border-radius: .6rem;
+  background: #5bc0be; color: #0b132b; font-weight: 600; text-decoration: none;
+}
+
+.btn-ghost {
+  background: transparent; color: #0b132b; border: 2px solid #cbd5e0;
+}
+
+.btn:hover { filter: brightness(.95); }
+.btn-ghost:hover { background: #f7fafc; }

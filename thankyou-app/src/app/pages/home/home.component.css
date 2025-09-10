@@ -1,0 +1,39 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0 1rem;
+}
+.hero-content h1 { margin: 0 0 .5rem; font-size: clamp(2rem, 3vw, 3rem); }
+.hero-actions { display: flex; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; }
+.hero-img {
+  width: 100%; height: auto; border-radius: 16px; object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.section { padding: 1rem 0 2rem; }
+.section-head { margin-bottom: .75rem; }
+.muted { color: #6b7280; }
+.error { color: #b91c1c; }
+.center { text-align: center; }
+
+.grid.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+.card-img {
+  grid-column: span 4;
+  background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+.card-img img { display: block; width: 100%; height: auto; }
+.card-img figcaption { padding: .5rem .75rem; font-size: .9rem; color: #374151; }
+
+@media (max-width: 1024px) {
+  .card-img { grid-column: span 6; }
+}
+@media (max-width: 640px) {
+  .hero-section { grid-template-columns: 1fr; }
+  .card-img { grid-column: span 12; }
+}

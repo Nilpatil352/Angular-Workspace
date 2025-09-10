@@ -1,0 +1,21 @@
+<section class="section">
+  <h1>Contact Us</h1>
+  <p class="muted">We usually respond within one business day.</p>
+
+  <div class="contact-grid">
+    <form class="contact-form" (submit)="$event.preventDefault()">
+      <label>Name <input type="text" placeholder="Your Name" required></label>
+      <label>Email <input type="email" placeholder="your@email.com" required></label>
+      <label>Message <textarea rows="4" placeholder="How can we help?" required></textarea></label>
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+    <div class="map-wrap">
+      <iframe
+        title="ImaginaryCo Office"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0915030361703!2d-122.401363!3d37.793617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064fd1f9f5f%3A0x7e2f512b3a1b7a2c!2sSalesforce%20Tower!5e0!3m2!1sen!2sus!4v1615143182439"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>

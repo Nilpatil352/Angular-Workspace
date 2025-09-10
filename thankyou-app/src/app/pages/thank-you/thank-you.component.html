@@ -1,0 +1,29 @@
+<section class="thankyou">
+  <div class="card">
+    <div class="checkmark" aria-hidden="true">✓</div>
+
+    <h2>Thank you{{ name ? (', ' + name) : '' }}!</h2>
+    <p class="lead">
+      Your request has been received successfully.
+    </p>
+
+    <div class="meta">
+      <div *ngIf="orderId"><strong>Reference:</strong> {{ orderId }}</div>
+      <div><strong>Date:</strong> {{ dateStr }}</div>
+    </div>
+
+    <hr>
+
+    <p>
+      We’ve emailed a confirmation with next steps.
+      If you have any questions, reach us at
+      <a href="mailto:support@imaginary.co">support@imaginary.co</a>.
+    </p>
+
+    <div class="actions">
+      <button class="btn" (click)="goBack()">⬅ Back</button>
+      <a routerLink="/" class="btn btn-ghost">🏠 Go Home</a>
+      <a routerLink="/" fragment="help" class="btn btn-ghost">❓ Need help?</a>
+    </div>
+  </div>
+</section>

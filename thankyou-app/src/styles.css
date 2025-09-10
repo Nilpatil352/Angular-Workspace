@@ -1,0 +1,17 @@
+:root { --container-max: 1100px; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial; color: #0b132b; background: #f5f7fb; }
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 1rem; }
+.site-footer { text-align: center; padding: 1rem; color: #6b7280; }
+
+/* Buttons */
+.btn { display: inline-block; padding: .7rem 1rem; border-radius: .6rem; background: #5bc0be; color: #0b132b; font-weight: 600; text-decoration: none; border: none; cursor: pointer; }
+.btn:hover { filter: brightness(.95); }
+.btn-ghost { background: transparent; color: #0b132b; border: 2px solid #cbd5e0; }
+
+/* Sections */
+.section { padding: 1rem 0 2rem; }
+
+/* Utility grids (used above) */
+.grid { display: grid; gap: 1rem; }
